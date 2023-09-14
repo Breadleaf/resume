@@ -1,1 +1,67 @@
 % !TEX program = xelatex
+
+%\usepackage{graphicx}
+%\usepackage[pdfnewwindow=true]{hyperref}
+%\usepackage{sectsty}
+%\usepackage{enumitem}
+%\usepackage{titlesec}
+%\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+%\usepackage{sectsty}
+%\usepackage[document]{ragged2e}
+
+
+\documentclass[10pt,letterpaper]{article}
+\usepackage[margin=0.55in]{geometry}
+
+% -----------------------------------------------------------------------------
+
+% Note: Konsole can hover hex codes to see the color
+
+\usepackage[dvipsnames]{xcolor}
+\definecolor{headercolor}{HTML}{0b5394} % #0b5394
+
+% -----------------------------------------------------------------------------
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+% -----------------------------------------------------------------------------
+
+\usepackage{fontspec}
+
+\newcommand{\fontpath}{./fonts/}
+
+\newfontfamily\mytextfont{JetBrainsMono}[
+    Extension      = .ttf,
+    UprightFont    = *-Light,
+    BoldFont       = *-Bold,
+    ItalicFont     = *-Italic,
+    BoldItalicFont = *-BoldItalic,
+    Path           = \fontpath
+]
+
+\newcommand{\customtext}[2]{%
+    {\fontsize{#1}{\dimexpr #1pt+2pt}\selectfont #2}%
+}
+
+% -----------------------------------------------------------------------------
+
+\usepackage{fancyhdr}
+\fancyfoot[C]{\mytextfont\textit{\customtext{12}{Last Updated: \today}}}
+
+% -----------------------------------------------------------------------------
+
+% Took these from: https://github.com/sumnerevans/resume
+
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+% -----------------------------------------------------------------------------
+
+\begin{document}
+
+\mytextfont
+
+\end{document}
