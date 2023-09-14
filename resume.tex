@@ -11,7 +11,7 @@
 
 
 \documentclass[10pt,letterpaper]{article}
-\usepackage[margin=0.55in]{geometry}
+\usepackage[margin=0.25in]{geometry}
 
 % -----------------------------------------------------------------------------
 
@@ -19,18 +19,20 @@
 
 \usepackage[dvipsnames]{xcolor}
 \definecolor{headercolor}{HTML}{0b5394} % #0b5394
+\definecolor{black}{HTML}{000000} % #000000
+\definecolor{gray}{HTML}{b8bfc6} % #b8bfc6
 
 % -----------------------------------------------------------------------------
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
+\renewcommand{\headrule}{}
 
 % -----------------------------------------------------------------------------
 
 \usepackage{fontspec}
 
 \newcommand{\fontpath}{./fonts/}
-
 \newfontfamily\mytextfont{JetBrainsMono}[
     Extension      = .ttf,
     UprightFont    = *-Light,
@@ -63,5 +65,27 @@
 \begin{document}
 
 \mytextfont
+
+\begin{flushleft}
+    \textcolor{headercolor}{\customtext{20}{Bradley Hutchings}} \\
+    \vspace{14pt}
+
+    \customtext{11}{(707)-302-9750 | bradleyhutchings@mines.edu} \\
+    \customtext{11}{linkedin.com/in/bradley-k-hutchings | github.com/breadleaf | gitlab.com/breadleaf} \\
+    \vspace{14pt}
+
+    \textcolor{headercolor}{\customtext{14}{EDUCATION}}
+    \textcolor{gray}{\rule{\textwidth}{2pt}}
+    {\customtext{12}{\textbf{Colorado School of Mines}} \hfill {\customtext{12}{May 2023 -> Current}}} \\
+    {\customtext{12}{\textbf{Major}} \customtext{11}{| Computer Science (Computer Engineering Focus) Working towards Masters in CS}} \\
+    \vspace{14pt}
+
+    \textcolor{headercolor}{\customtext{14}{SKILLS}}
+    \textcolor{gray}{\rule{\textwidth}{2pt}}
+    \begin{tabular}{l|l}
+        \customtext{12}{\textbf{Languages}} & \customtext{12}{C++, Python 3, Java, C} \\
+        \customtext{12}{\textbf{Developer Tools}} & \customtext{12}{SSH, Vim, LLMs + Prompt Engineering} \\
+    \end{tabular}
+\end{flushleft}
 
 \end{document}
