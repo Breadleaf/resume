@@ -1,17 +1,10 @@
 % !TEX program = xelatex
 
-%\usepackage{graphicx}
-%\usepackage[pdfnewwindow=true]{hyperref}
-%\usepackage{sectsty}
-%\usepackage{enumitem}
-%\usepackage{titlesec}
-%\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
-%\usepackage{sectsty}
-%\usepackage[document]{ragged2e}
-
+% -----------------------------------------------------------------------------
 
 \documentclass[10pt,letterpaper]{article}
-\usepackage[margin=0.25in]{geometry}
+\usepackage[letterpaper, margin=0.25in]{geometry}
+% \usepackage[letterpaper, margin=0.5in]{geometry}
 
 % -----------------------------------------------------------------------------
 
@@ -70,15 +63,21 @@
     \textcolor{headercolor}{\customtext{20}{Bradley Hutchings}} \\
     \vspace{14pt}
 
+    % -------------------------------------------------------------------------
+
     \customtext{11}{(707)-302-9750 | bradleyhutchings@mines.edu} \\
     \customtext{11}{linkedin.com/in/bradley-k-hutchings | github.com/breadleaf | gitlab.com/breadleaf} \\
     \vspace{14pt}
 
+    % -------------------------------------------------------------------------
+
     \textcolor{headercolor}{\customtext{14}{EDUCATION}}
     \textcolor{gray}{\rule{\textwidth}{2pt}}
-    {\customtext{12}{\textbf{Colorado School of Mines}} \hfill {\customtext{12}{May 2023 -> Current}}} \\
+    {\customtext{12}{\textbf{Colorado School of Mines}} \hfill \customtext{12}{May 2023 -> Current}} \\
     {\customtext{12}{\textbf{Major}} \customtext{11}{| Computer Science (Computer Engineering Focus) Working towards Masters in CS}} \\
     \vspace{14pt}
+
+    % -------------------------------------------------------------------------
 
     \textcolor{headercolor}{\customtext{14}{SKILLS}}
     \textcolor{gray}{\rule{\textwidth}{2pt}}
@@ -86,6 +85,57 @@
         \customtext{12}{\textbf{Languages}} & \customtext{12}{C++, Python 3, Java, C} \\
         \customtext{12}{\textbf{Developer Tools}} & \customtext{12}{SSH, Vim, LLMs + Prompt Engineering} \\
     \end{tabular}
+    \vspace{14pt}
+    
+    % -------------------------------------------------------------------------
+
+    \textcolor{headercolor}{\customtext{14}{PROJECTS}}
+    \textcolor{gray}{\rule{\textwidth}{2pt}}
+
+    {\customtext{12}{\textbf{Keyboard OS}} \hfill \customtext{12}{May 2023 -> Current}} \\
+    % {\customtext{11}{(github.com/ColoradoSchoolOfMines/keyboard-os)} \hfill \customtext{11}{C++ | Arduino}} \\
+    \customtext{10}{\textit{An ACM project I lead, aimed at teaching students embedded programming and package management.}}
+    \vspace{14pt}
+
+    {\customtext{12}{\textbf{Plummet Language}} \hfill \customtext{12}{January 2023 -> Current}} \\
+    % {\customtext{11}{(github.com/ColoradoSchoolOfMines/plummet-language)} \hfill \customtext{11}{C++ | C | LLVM-IR}} \\
+    \customtext{10}{\textit{An ACM project I lead, currently working on a compiled dynamically-typed programming language.}}
+    \vspace{14pt}
+
+    {\customtext{12}{\textbf{Leaf-Lang}} \hfill \customtext{12}{August 2022 -> Current}} \\
+    % {\customtext{11}{(gitlab.com/Breadleaf/leaf-lang)} \hfill \customtext{11}{Python3 | Leaf-Lang}} \\
+    \customtext{10}{\textit{An interpreted/transpiled procedural dynamically-typed stack-based programming language.}}
+    \vspace{14pt}
+
+
+    {\customtext{12}{\textbf{Cpp-Py}} \hfill \customtext{12}{June 2022 -> Current}} \\
+    % {\customtext{11}{(gitlab.com/Breadleaf/cpp\_py)} \hfill \customtext{11}{C++}} \\
+    \customtext{10}{\textit{A C++ header file aimed at teaching students C++ in a familiar syntax.}}
+    \vspace{14pt}
+
+
+    {\customtext{12}{\textbf{Bread Software Repository}} \hfill \customtext{12}{December 2021 -> Current}} \\
+    % {\customtext{11}{(gitlab.com/Breadleaf/bread-software-repo)} \hfill \customtext{11}{Bash | PKGBUILD (Arch Linux)}} \\
+    \customtext{10}{\textit{My Gitlab hosted software repository for Arch Linux (compatible with pacman package manager).}}
+    \vspace{14pt}
+
+    % -------------------------------------------------------------------------
+
+    \textcolor{headercolor}{\customtext{14}{EXPERIENCE}}
+    \textcolor{gray}{\rule{\textwidth}{2pt}}
+
+    {\customtext{12}{\textbf{Analytical Data Systems (Internship)}} \hfill \customtext{12}{August 2023 -> June 2023}} \\
+    \customtext{10}{\textit{Summer field session through Colorado School of Mines working on LLMs and LangChain.}}
+    \vspace{14pt}
+
+    {\customtext{12}{\textbf{Computer Engineering Group (Internship)}} \hfill \customtext{12}{March 2020 -> June 2020}} \\
+    \customtext{10}{\textit{System Admin for short term user data storage server for a mobile technology repair shop.}}
+    \vspace{14pt}
+
+    {\customtext{12}{\textbf{FRC \#7667 (Software Engineer)}} \hfill \customtext{12}{November 2018 -> June 2019}} \\
+    \customtext{10}{\textit{Robot drive train and game piece manipulation mechanism programming using C++/WPILIB.}}
+    \vspace{14pt}
+
 \end{flushleft}
 
 \end{document}
