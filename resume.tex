@@ -41,8 +41,10 @@
 
 % -----------------------------------------------------------------------------
 
-\usepackage{fancyhdr}
-\fancyfoot[C]{\mytextfont\textit{\customtext{12}{Last Updated: \today}}}
+% For the life of me, I could not get this to work...
+
+% \usepackage{fancyhdr}
+% \fancyfoot[C]{\mytextfont\textit{\customtext{12}{Last Updated: \today}}}
 
 % -----------------------------------------------------------------------------
 
@@ -61,6 +63,7 @@
 
 \begin{flushleft}
     \textcolor{headercolor}{\customtext{20}{Bradley Hutchings}} \\
+    \customtext{12}{\textit{\customtext{10}{Last Updated: \today}}} \\
     \vspace{14pt}
 
     % -------------------------------------------------------------------------
@@ -73,7 +76,7 @@
 
     \textcolor{headercolor}{\customtext{14}{EDUCATION}}
     \textcolor{gray}{\rule{\textwidth}{2pt}}
-    {\customtext{12}{\textbf{Colorado School of Mines}} \hfill \customtext{12}{May 2023 -> Current}} \\
+    {\customtext{12}{\textbf{Colorado School of Mines}} \hfill \customtext{12}{May 2021 -> Current}} \\
     {\customtext{12}{\textbf{Major}} \customtext{11}{| Computer Science (Computer Engineering Focus) Working towards Masters in CS}} \\
     \vspace{14pt}
 
@@ -82,8 +85,8 @@
     \textcolor{headercolor}{\customtext{14}{SKILLS}}
     \textcolor{gray}{\rule{\textwidth}{2pt}}
     \begin{tabular}{l|l}
-        \customtext{12}{\textbf{Languages}} & \customtext{12}{Python3, C++, C, Java, JavaScript, Lua} \\
-        \customtext{12}{\textbf{Developer Tools}} & \customtext{12}{Docker, GNU-MAKEFILE, PSQL, SSH, Vim, LLMs + Prompt Engineering} \\
+        \customtext{12}{\textbf{Languages}} & \customtext{12}{Python3, C++, C, GoLang, Java, JavaScript, Lua, PSQL} \\
+        \customtext{12}{\textbf{Developer Tools}} & \customtext{12}{Docker, GNU-MAKEFILE, PlatformIO, LLMs + Prompt Engineering} \\
     \end{tabular}
     \vspace{14pt}
 
@@ -93,7 +96,7 @@
     \textcolor{gray}{\rule{\textwidth}{2pt}}
 
     {\customtext{12}{\textbf{Plummet Language}} \hfill \customtext{12}{January 2023 -> Current}} \\
-    \customtext{10}{\textit{An ACM project I lead, currently working on a compiled dynamically-typed programming language.}}
+    \customtext{10}{\textit{An ACM project I lead, currently working on a compiled statically-typed programming language.}}
     \vspace{14pt}
 
     {\customtext{12}{\textbf{Plummet Language Package Manager}} \hfill \customtext{12}{January 2023 -> Current}} \\
