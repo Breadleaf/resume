@@ -12,4 +12,6 @@ RUN rm -rf /var/lib/apt/lists/*
 
 WORKDIR /data
 
+COPY . /data/
+
 CMD ["make"]
