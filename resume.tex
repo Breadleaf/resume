@@ -3,17 +3,33 @@
 % -----------------------------------------------------------------------------
 
 \documentclass[10pt,letterpaper]{article}
-\usepackage[letterpaper, margin=0.25in]{geometry}
-% \usepackage[letterpaper, margin=0.5in]{geometry}
+% \usepackage[letterpaper, margin=0.25in]{geometry}
+\usepackage[letterpaper, margin=0.5in]{geometry}
 
 % -----------------------------------------------------------------------------
 
-% Note: Konsole can hover hex codes to see the color
+% Note: 'Konsole' can hover hex codes to see the color
 
 \usepackage[dvipsnames]{xcolor}
 \definecolor{headercolor}{HTML}{0b5394} % #0b5394
 \definecolor{black}{HTML}{000000} % #000000
 \definecolor{gray}{HTML}{b8bfc6} % #b8bfc6
+
+% -----------------------------------------------------------------------------
+
+\usepackage{svg}
+\usepackage{graphicx}
+
+\newcommand{\LinkedInIcon}{\includesvg[height=1em,inkscapelatex=false]{./icons/linkedin-brands-solid.svg}\,}
+\newcommand{\GithubIcon}{\includesvg[height=1em,inkscapelatex=false]{./icons/github-brands-solid.svg}\,}
+\newcommand{\GitlabIcon}{\includesvg[height=1em,inkscapelatex=false]{./icons/gitlab-brands-solid.svg}\,}
+\newcommand{\WebsiteIcon}{\includesvg[height=1em,inkscapelatex=false]{./icons/globe-solid.svg}\,}
+
+\newcommand{\ProfileIcon}{\includesvg[height=1em,inkscapelatex=false]{./icons/comment-solid.svg}\,}
+\newcommand{\EducationIcon}{\includesvg[height=1em,inkscapelatex=false]{./icons/graduation-cap-solid.svg}\,}
+\newcommand{\SkillsIcon}{\includesvg[height=1em,inkscapelatex=false]{./icons/circle-info-solid.svg}\,}
+\newcommand{\WorkIcon}{\includesvg[height=1em,inkscapelatex=false]{./icons/briefcase-solid.svg}\,}
+\newcommand{\ProjectsIcon}{\includesvg[height=1em,inkscapelatex=false]{./icons/code-solid.svg}\,}
 
 % -----------------------------------------------------------------------------
 
@@ -43,10 +59,17 @@
 
 % Took these from: https://github.com/sumnerevans/resume
 
+\usepackage{tabularx}
+\usepackage{enumitem}
+
 \tolerance=1
 \emergencystretch=\maxdimen
 \hyphenpenalty=10000
 \hbadness=10000
+
+\setlist[itemize]{itemsep=-1pt}
+
+\pagenumbering{gobble}
 
 % -----------------------------------------------------------------------------
 
@@ -55,94 +78,108 @@
 \mytextfont
 
 \begin{flushleft}
-    \textcolor{headercolor}{\customtext{20}{Bradley Kenneth Hutchings}} \\
-    \customtext{12}{\textit{\customtext{10}{Last Updated: \today}}} \\
-    \vspace{14pt}
+    \begin{minipage}{0.48\textwidth}
+        \textcolor{black}{\customtext{17}{\textbf{Bradley Kenneth Hutchings}}} \\
+        \customtext{10}{(707)-302-9750 \textbullet \ bradleyhutchings@mines.edu}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\textwidth}
+        \customtext{10}{\LinkedInIcon \ linkedin.com/in/bradley-k-hutchings} \\
+        \customtext{10}{\GithubIcon \ github.com/breadleaf} \\
+        \customtext{10}{\GitlabIcon \ gitlab.com/breadleaf} \\
+        \customtext{10}{\WebsiteIcon \ bradley-hutchings.com}
+    \end{minipage}
+
+    \vspace{10pt}
 
     % -------------------------------------------------------------------------
 
-    \customtext{10}{(707)-302-9750 | bradleyhutchings@mines.edu | bradley-hutchings.com | breadleaf.github.io} \\
-    \customtext{10}{linkedin.com/in/bradley-k-hutchings | github.com/breadleaf | gitlab.com/breadleaf} \\
-    \vspace{14pt}
-
-    % -------------------------------------------------------------------------
-
-    \textcolor{headercolor}{\customtext{14}{EDUCATION}}
+    \textcolor{headercolor}{\customtext{14}{\ProfileIcon \ \textbf{PROFILE}}}
     \textcolor{gray}{\rule{\textwidth}{2pt}}
-    {\customtext{12}{\textbf{Colorado School of Mines} - Golden, CO} \hfill \customtext{12}{May 2025}} \\
-    {\customtext{10}{B.S. Computer Science with Computer Engineering Focus} \hfill \customtext{12}{CSCI GPA: 2.97}} \\
-    \customtext{10}{Working towards a M.S in Computer Science}
-    \vspace{14pt}
+
+    \customtext{10}{I am a passionate computer science enthusiast with a strong foundation in software development and problem-solving. In my free time, I like to learn Spanish and Japanese, bake bread, and make music. I am a dedicated lifelong learner with lots of curiosity!}
+
+    \vspace{10pt}
 
     % -------------------------------------------------------------------------
 
-    \textcolor{headercolor}{\customtext{14}{SKILLS}}
+    \textcolor{headercolor}{\customtext{14}{\EducationIcon \ \textbf{EDUCATION}}}
     \textcolor{gray}{\rule{\textwidth}{2pt}}
+
+    {\customtext{10}{\textbf{Colorado School of Mines} - Golden, CO} \hfill \customtext{10}{\textit{July 2021 - May 2025}}} \\
+    \customtext{10}{Bachelor of Science Computer Science \hfill CSCI GPA: 2.96}
+
+    \vspace{10pt}
+
+    % -------------------------------------------------------------------------
+
+    \textcolor{headercolor}{\customtext{14}{\SkillsIcon \ \textbf{SKILLS}}}
+    \textcolor{gray}{\rule{\textwidth}{2pt}}
+
     \begin{tabular}{l|l}
-        \customtext{12}{\textbf{Languages}} & \customtext{12}{Python3, C/C++, GoLang, Java, JavaScript, Lua, PSQL, \LaTeX} \\
-        \customtext{12}{\textbf{Developer Tools}} & \customtext{12}{Docker, GNU-MAKEFILE, PlatformIO, LLMs + Prompt Engineering} \\
+        \customtext{10}{\textbf{Languages}} & \customtext{10}{Python3, C/C++, Go, Java, JavaScript, Lua, PSQL, \LaTeX} \\
+        \customtext{10}{\textbf{Developer Tools}} & \customtext{10}{Linux, Docker, GNU-MAKEFILE, PlatformIO, LLMs + Prompt Engineering} \\
     \end{tabular}
-    \vspace{14pt}
+
+    \vspace{10pt}
 
     % -------------------------------------------------------------------------
 
-    \textcolor{headercolor}{\customtext{14}{EXPERIENCE}}
+    \textcolor{headercolor}{\customtext{14}{\WorkIcon \ \textbf{WORK EXPERIENCE}}}
     \textcolor{gray}{\rule{\textwidth}{2pt}}
 
-    {\customtext{12}{\textbf{CSM \& NSF REU: Research Internship under Prof. Dong Chen}} \hfill \customtext{12}{June 2024 -> September 2024}} \\
-    \customtext{9}{\textit{Assisted graduate student Su Wang. Responsibilities include running tests and summarizing research data.}}
-    \vspace{14pt}
-
-    {\customtext{12}{\textbf{Analytical Data Systems: Product Development Internship}} \hfill \customtext{12}{June 2023 -> August 2023}} \\
-    \customtext{9}{\textit{Summer field session through Colorado School of Mines working on LLMs and LangChain.}}
-    \vspace{14pt}
-
-    {\customtext{12}{\textbf{Computer Engineering Group: Data Engineering Internship}} \hfill \customtext{12}{March 2020 -> June 2020}} \\
-    \customtext{9}{\textit{System Admin for short term user data storage server for a mobile technology repair shop.}}
-    \vspace{14pt}
-
-    {\customtext{12}{\textbf{FRC \#7667: Robotics Software Engineer}} \hfill \customtext{12}{November 2018 -> June 2019}} \\
+    {\customtext{10}{\textbf{Research Internship} - CSM \& National Science Foundation}} \hfill \customtext{10}{\textit{June 2024 - September 2024}}
     \begin{itemize}
-        \item \customtext{9}{\textit{Competed in the 2019 Huston World Championship.}}
-        \item \customtext{9}{\textit{Robot drive train and game piece manipulation mechanism programming using C++/WPILIB.}}
+        \item \customtext{10}{Automated data aggregation, filtering, and processing with \textbf{Python} and \textbf{Pandas}.}
+        \item \customtext{10}{Trained \textbf{SciKitLearn} models to identify vulnerable network data.}
+        \item \customtext{10}{Collaborated closely with graduate student Su Wang and Prof. Dong Chen, providing daily progress reports and weekly updates.}
     \end{itemize}
-    \vspace{14pt}
+
+    {\customtext{10}{\textbf{Product Development Internship} - Analytical Data Systems}} \hfill \customtext{10}{\textit{June 2023 - August 2023}}
+    \begin{itemize}
+        \item \customtext{10}{Developed a toolchain to have LLMs introspect and reprompt for more normalized results based on user-defined qualities.}
+        \item \customtext{10}{Implemented several interfaces to interact with the service from Discord or a custom web client in \textbf{JavaScript}.}
+        \item \customtext{10}{Created a scaling backend infrastructure to handle user permissions and requests in \textbf{Go}.}
+    \end{itemize}
+
+    {\customtext{10}{\textbf{Data Infrastructure Freelance} - Computer Engineering Group}} \hfill \customtext{10}{\textit{March 2020 - June 2020}}
+    \begin{itemize}
+        \item \customtext{10}{Built a solution to manage customer device data before repair in \textbf{C\#},\textbf{.NET}, and \textbf{PSQL}.}
+    \end{itemize}
+
+    \vspace{10pt}
 
     % -------------------------------------------------------------------------
 
-    \textcolor{headercolor}{\customtext{14}{PROJECTS}}
+    \textcolor{headercolor}{\customtext{14}{\ProjectsIcon \ \textbf{NOTABLE PROJECTS}}}
     \textcolor{gray}{\rule{\textwidth}{2pt}}
 
-    {\customtext{12}{\textbf{Plummet Language}} \hfill \customtext{12}{January 2023 -> Current}} \\
-    \customtext{9}{\textit{An ACM project I lead, currently working on a compiled statically-typed programming language.}}
-    \vspace{14pt}
+    {\customtext{10}{\textbf{Plummet} - Author}} \hfill \customtext{10}{\textit{January 2023 - Present}}
+    \begin{itemize}
+        \item \customtext{10}{An \textbf{ACM} project I led with the goal of implementing a cross-platform language.}
+        \item \customtext{10}{Created technical specification documents for the language and package manager.}
+        \item \customtext{10}{Implemented toolchain to manage packages and compile programs into \textbf{x86\_64 ASM} using \textbf{Go}.}
+    \end{itemize}
 
-    {\customtext{12}{\textbf{Plummet Language Package Manager}} \hfill \customtext{12}{January 2023 -> Current}} \\
-    \customtext{9}{\textit{A package manager for the Plummet Language, using remote git repositories for package hosting.}}
-    \vspace{14pt}
+    {\customtext{10}{\textbf{Keyboard OS} - Author}} \hfill \customtext{10}{\textit{January 2023 - December 2024}}
+    \begin{itemize}
+        \item \customtext{10}{Prototyped hardware and firmware with \textbf{PlatformIO}.}
+        \item \customtext{10}{Created a DSL that abstracted the \textbf{Adafruit GFX} library to control an on-device screen in \textbf{C++}.}
+    \end{itemize}
 
-    {\customtext{12}{\textbf{Keyboard OS}} \hfill \customtext{12}{May 2023 -> Current}} \\
-    \customtext{9}{\textit{An ACM project I lead, aimed at teaching students embedded programming and package management.}}
-    \vspace{14pt}
+    {\customtext{10}{\textbf{Leaf Lang} - Author}} \hfill \customtext{10}{\textit{August 2022 - January 2023}}
+    \begin{itemize}
+        \item \customtext{10}{An interpreted/transpiled procedural dynamically-typed stack-based programming language written in \textbf{Python}.}
+    \end{itemize}
 
-    {\customtext{12}{\textbf{simple\_cpp\_unit\_tests}} \hfill \customtext{12}{June 2023 -> Current}} \\
-    \customtext{9}{\textit{A C++ unit test framework focused on being lightweight and easy to use.}}
-    \vspace{14pt}
-
-    {\customtext{12}{\textbf{Leaf-Lang}} \hfill \customtext{12}{August 2022 -> Current}} \\
-    \customtext{9}{\textit{An interpreted/transpiled procedural dynamically-typed stack-based programming language.}}
-    \vspace{14pt}
-
-
-    {\customtext{12}{\textbf{Cpp-Py}} \hfill \customtext{12}{June 2022 -> Current}} \\
-    \customtext{9}{\textit{A C++ header file aimed at teaching students C++ in a familiar syntax.}}
-    \vspace{14pt}
-
-
-    {\customtext{12}{\textbf{Bread Software Repository}} \hfill \customtext{12}{December 2021 -> Current}} \\
-    \customtext{9}{\textit{My Gitlab hosted software repository for Arch Linux (compatible with pacman package manager).}}
-    \vspace{14pt}
+    {\customtext{10}{\textbf{Robotics Software Engineer} - FRC \#7667}} \hfill \customtext{10}{\textit{November 2018 - June 2019}}
+    \begin{itemize}
+        \item \customtext{10}{\textit{Competed in the 2019 Houston World Championship.}}
+        \item \customtext{10}{\textit{Fabricated and implemented a game piece manipulation mechanism using \textbf{C++} and \textbf{WPILIB}.}}
+    \end{itemize}
 
 \end{flushleft}
+
+\cfoot{{\mytextfont \textit{Last Updated: \today}}}
 
 \end{document}
