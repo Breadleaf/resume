@@ -1,12 +1,10 @@
-# Taken from https://github.com/sumnerevans/resume
+compile: fmt
+	typst compile resume.typ resume.pdf --font-path ./fonts
 
-all: resume.pdf
+watch:
+	@#https://github.com/breadleaf/watcher-cli
+	watcher -files resume.typ -command "make compile"
 
-%.pdf: %.tex
-	xelatex -shell-escape $<
-
-clean:
-	rm -rf *.aux missfont.log *.fdb_latexmk *.log *.out
-
-open:
-	xdg-open *.pdf
+fmt:
+	@#https://github.com/Enter-tainer/typstyle?tab=readme-ov-file
+	typstyle -i resume.typ
