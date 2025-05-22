@@ -1,15 +1,12 @@
 # My Resume
 
-This is the [source code](./resume.tex) and [rendered version](./resume.pdf) of
+This is the [source code](./resume.typ) and [rendered version](./resume.pdf) of
 my resume.
 
 ## How to compile
 
-I have spent far far too long in dependency hell trying to get LaTeX to work on any operating system. I made a dockerfile to make it easier to compile the resume.
-
 ```bash
-docker build -t xelatex-make .
-docker run --rm -v "$(pwd)":/data xelatex-make
+make build
 ```
 
 ## Copyright and License

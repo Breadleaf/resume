@@ -1,5 +1,7 @@
-compile: fmt
+build:
 	typst compile resume.typ resume.pdf --font-path ./fonts
+
+compile: build fmt
 
 watch:
 	@#https://github.com/breadleaf/watcher-cli
