@@ -114,16 +114,14 @@
 
 // ---- ----
 
-#svgHeader("./icons/comment-solid.svg", "PROFILE")
+// #svgHeader("./icons/comment-solid.svg", "PROFILE")
 
-#text(size: SizeFont.expr)[
-  I am a passionate computer science enthusiast with a strong foundation in
-  software development and problem-solving. In my free time, I like to learn
-  Spanish and Japanese, bake bread, and make music. I am a dedicated lifelong
-  learner with lots of curiosity!
-]
+// #text(size: SizeFont.expr)[
+//   I am a passionate computer scientist with a strong foundation in
+//   software development and problem-solving. I am a dedicated lifelong learner with lots of curiosity!
+// ]
 
-#v(NEW_SECTION_SPACE)
+#v(NEW_SECTION_SPACE + 0.3em)
 
 #svgHeader("./icons/graduation-cap-solid.svg", "EDUCATION")
 
@@ -147,11 +145,11 @@
   columns: 2,
   row-gutter: -0.5em,
   [*Languages*], [| Python3, C/C++, Go, Java, JavaScript, Lua, Postgres SQL],
-  [*Developer Tools*], [| Linux, Docker, Git, PlatformIO, Makefile],
-  [*Libraries/Frameworks*], [| Node.js, Flask, NumPy, Matplotlib],
+  [*Developer Tools*], [| Linux, Docker, Git, PlatformIO, Makefile, Pkl],
+  // [*Libraries/Frameworks*], [| Node.js, Flask, NumPy, Matplotlib],
 )
 
-#v(NEW_SECTION_SPACE)
+#v(NEW_SECTION_SPACE - 0.75em)
 
 #svgHeader("./icons/briefcase-solid.svg", "WORK EXPERIENCE")
 
@@ -165,7 +163,10 @@
       Managed a team of 7 intern engineers whilst working closely with other advisors.
     ],
     [
-      Advised on *Python*, *Flask*, *Hardware* configuration, and good industry programming practices.
+      Advised on *Python*, *Flask*, *Hardware* configuration, and industry programming practices.
+    ],
+    [
+      Developed and open-sourced a *Python* tool for importing *Jupyter Notebooks*, streamlining data science workflows.
     ],
   ),
 )
@@ -173,7 +174,7 @@
 #exprItem(
   "Research Internship",
   "CSM & National Science Foundation",
-  monthYear(6, 2024),
+  monthYear(5, 2024),
   monthYear(9, 2024),
   list(
     [
@@ -193,21 +194,21 @@
 #exprItem(
   "Product Development Internship",
   "Analytical Data Systems",
-  monthYear(6, 2023),
+  monthYear(5, 2023),
   monthYear(8, 2023),
   list(
     [
       Developed a toolchain to have LLMs to introspect and reprompt for more
-      normalized results based on user-defined qualitied.
+      normalized results based on user-defined qualities.
     ],
     [
       Implemented several interfaces to interact with the service from Discord
       or a custom web client in *JavaScript*.
     ],
-    [
-      Created a scaling backend infrastructure to handle user permissions and
-      requests in *Go*.
-    ],
+    // [
+    //   Created a scaling backend infrastructure to handle user permissions and
+    //   requests in *Go*.
+    // ],
   ),
 )
 
@@ -226,6 +227,52 @@
 
 #svgHeader("./icons/code-solid.svg", "PROJECTS")
 
+// #exprItem(
+//   "Distributed Custom ISA Execution Environment",
+//   "Author",
+//   monthYear(4, 2025),
+//   TODAY,
+//   box[
+//     #text[
+//       Designed and am working towards implementing a complete, custom computing ecosystem, including an *Instruction Set Architecture* (ISA), *Assembler*, *Virtual Machine* (VM), and a *TCP* machine state transmission networking protocol. The system enables distributed execution of custom machine code across a client-router-server architecture.
+//     ]
+//     #list(
+//       [
+//         The custom *8-bit ISA* is executed by a corresponding *VM* developed in *Go*, featuring 256-bytes of RAM.
+//       ],
+//       [
+//         The custom *TCP* networking protocol implemented in *Go*, enables distributed execution by transmitting machine state packets between client, router, and server.
+//       ],
+//       [
+//         The *assembler* translates human-readable assembly into the custom ISA's machine code using a *LL(1) Tabular Parser* dynamically generated applying *Formal Language Theory* algorithms.
+//       ],
+//     )
+//   ],
+// )
+
+#exprItem(
+  "Distributed Custom ISA Execution Environment",
+  "Author",
+  monthYear(4, 2025),
+  TODAY,
+  box[
+    #text[
+      Designed and am working towards implementing a complete, custom computing ecosystem, including an *Instruction Set Architecture* (ISA), *Assembler*, *Virtual Machine* (VM), and a *TCP* machine state transmission networking protocol. The system enables distributed execution of custom machine code across a client-router-server architecture.
+    ]
+    #list(
+      [
+        The custom *8-bit ISA* is executed by a corresponding *VM* developed in *Go*, featuring 256-bytes of RAM.
+      ],
+      [
+        The custom *TCP* networking protocol implemented in *Go*, enables distributed execution by transmitting machine state packets between client, router, and server.
+      ],
+      [
+        The *assembler* translates human-readable assembly into the custom ISA's machine code using a *LL(1) Tabular Parser* dynamically generated applying *Formal Language Theory* algorithms.
+      ],
+    )
+  ],
+)
+
 // #exprItem("Plummet", "Author", monthYear(1, 2023), TODAY, list(
 //   [
 //     An *ACM* project I led with the goal of implementing a cross-platform
@@ -241,26 +288,41 @@
 //   ],
 // ))
 
+// #exprItem(
+//   "Keyboard OS",
+//   "Author",
+//   monthYear(1, 2023),
+//   monthYear(12, 2024),
+//   list(
+//     [
+//       Prototyped hardware and firmware with *PlatformIO*.
+//     ],
+//     [
+//       Created a DSL that abstracted the *Adafruit GFX* library to control an
+//       on-device screen in *C++*.
+//     ],
+//   ),
+// )
+
+// #exprItem("Leaf Lang", "Author", monthYear(8, 2022), monthYear(1, 2023), list([
+//   An interpreted/transpiled procedural dynamically-typed stack-based
+//   programming language written in *Python*.
+// ]))
+
 #exprItem(
-  "Keyboard OS",
+  "Zine App",
   "Author",
-  monthYear(1, 2023),
-  monthYear(12, 2024),
+  monthYear(3, 2025),
+  TODAY,
   list(
     [
-      Prototyped hardware and firmware with *PlatformIO*.
+      Architecting the backend in *Go*, featuring microservices for authentication and *MinIO/S3 storage integration*, alongside *Redis* with a *custom Go wrapper* for session management.
     ],
     [
-      Created a DSL that abstracted the *Adafruit GFX* library to control an
-      on-device screen in *C++*.
+      Developing the *frontend with TypeScript and React (using Vite)*, with *NGINX* for reverse proxying backend services and *Docker Compose* for containerized deployment.
     ],
   ),
 )
-
-#exprItem("Leaf Lang", "Author", monthYear(8, 2022), monthYear(1, 2023), list([
-  An interpreted/transpiled procedural dynamically-typed stack-based
-  programming language written in *Python*.
-]))
 
 #exprItem(
   "Robotics Software Engineer",
