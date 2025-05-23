@@ -46,6 +46,7 @@
 
 #let svgHeader(imagePath, headerText) = {
   heading(level: 1)[
+    #v(0.25em)
     #box(image(imagePath, height: SizeFont.header))
     #text(headerText, fill: TextColors.TheBlue, size: SizeFont.header)
     #v(-0.75em)
@@ -138,13 +139,14 @@
 
 #v(NEW_SECTION_SPACE)
 
-#svgHeader("./icons/circle-info-solid.svg", "SKILLS")
+#svgHeader("./icons/circle-info-solid.svg", "TECHNICAL SKILLS")
 
+#v(NEW_SECTION_SPACE + 0.5em)
 #table(
   stroke: none,
   columns: 2,
   row-gutter: -0.5em,
-  [*Languages*], [| Python3, C/C++, Go, Java, JavaScript, Lua, Postgres],
+  [*Languages*], [| Python3, C/C++, Go, Java, JavaScript, Lua, Postgres SQL],
   [*Developer Tools*], [| Linux, Docker, Git, PlatformIO, Makefile],
   [*Libraries/Frameworks*], [| Node.js, Flask, NumPy, Matplotlib],
 )
@@ -152,6 +154,21 @@
 #v(NEW_SECTION_SPACE)
 
 #svgHeader("./icons/briefcase-solid.svg", "WORK EXPERIENCE")
+
+#exprItem(
+  "Contractor Work: Tech Lead & Manager",
+  "SwingLens LLC",
+  monthYear(5, 2025),
+  TODAY,
+  list(
+    [
+      Managed a team of 7 intern engineers whilst working closely with other advisors.
+    ],
+    [
+      Advised on *Python*, *Flask*, *Hardware* configuration, and good industry programming practices.
+    ],
+  ),
+)
 
 #exprItem(
   "Research Internship",
@@ -194,35 +211,35 @@
   ),
 )
 
-#exprItem(
-  "Data Infrastructure Freelance",
-  "Computer Engineering Group",
-  monthYear(3, 2020),
-  monthYear(6, 2020),
-  list([
-    Built a solution to manage customer device data before repair in *C\#*,
-    *.NET*, and *PSQL*.
-  ]),
-)
+// #exprItem(
+//   "Data Infrastructure Freelance",
+//   "Computer Engineering Group",
+//   monthYear(3, 2020),
+//   monthYear(6, 2020),
+//   list([
+//     Built a solution to manage customer device data before repair in *C\#*,
+//     *.NET*, and *PSQL*.
+//   ]),
+// )
 
 #v(NEW_SECTION_SPACE)
 
-#svgHeader("./icons/code-solid.svg", "NOTABLE PROJECTS")
+#svgHeader("./icons/code-solid.svg", "PROJECTS")
 
-#exprItem("Plummet", "Author", monthYear(1, 2023), TODAY, list(
-  [
-    An *ACM* project I led with the goal of implementing a cross-platform
-    language.
-  ],
-  [
-    Created technical specification documents for the language and package
-    manager.
-  ],
-  [
-    Implemented toolchain to manage packages and compile programs into
-    *x86\_64 ASM* using *Go*.
-  ],
-))
+// #exprItem("Plummet", "Author", monthYear(1, 2023), TODAY, list(
+//   [
+//     An *ACM* project I led with the goal of implementing a cross-platform
+//     language.
+//   ],
+//   [
+//     Created technical specification documents for the language and package
+//     manager.
+//   ],
+//   [
+//     Implemented toolchain to manage packages and compile programs into
+//     *x86\_64 ASM* using *Go*.
+//   ],
+// ))
 
 #exprItem(
   "Keyboard OS",
