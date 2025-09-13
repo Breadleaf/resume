@@ -15,7 +15,7 @@ compile: fmt build
 
 watch:
 	@#https://github.com/breadleaf/watcher-cli
-	$(WATCHER) -files resume_software.typ resume_hardware.typ -command "make compile"
+	$(WATCHER) -files "resume_software.typ resume_hardware.typ" -command "make compile"
 
 view:
 	grip README.md 8000

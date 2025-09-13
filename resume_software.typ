@@ -2,6 +2,7 @@
 // global values ---------------------------------------------------------------
 
 #let ACTIVE_LINKS = false
+// #let ACTIVE_LINKS = true
 
 #let FONT_FAMILY = "JetBrains Mono"
 
@@ -81,7 +82,8 @@
   ]
   #v(NEW_SECTION_SPACE)
   #text(size: SizeFont.expr)[
-    (707)-302-9750 #sym.bullet bradleyhutchings\@mines.edu
+    // (707)-302-9750 #sym.bullet bradleyhutchings\@mines.edu
+    (707)-302-9750 #sym.bullet bkhnapa\@gmail.com
   ]
 ])
 #h(1fr)
@@ -135,6 +137,14 @@
   ],
 )
 
+#exprItem(
+  "Napa Valley College",
+  "Napa, CA",
+  monthYear(1, 2017),
+  monthYear(1, 2021),
+  [ ],
+)
+
 #v(NEW_SECTION_SPACE)
 
 #svgHeader("./icons/circle-info-solid.svg", "TECHNICAL SKILLS")
@@ -144,9 +154,10 @@
   stroke: none,
   columns: 2,
   row-gutter: -0.5em,
-  [*Languages*], [| Python3, C/C++, Go, Java, JavaScript, Lua, Postgres SQL],
-  [*Developer Tools*], [| Linux, Docker, Git, PlatformIO, Makefile, Pkl],
-  // [*Libraries/Frameworks*], [| Node.js, Flask, NumPy, Matplotlib],
+  [*Languages*], [| Python3, C/C++, Go, JavaScript, Postgres],
+  [*Dev. Tools*], [| Linux, Docker, Git, Makefile, Nix, Nginx, S3 Bucket],
+  [*Libraries*],
+  [| Node.js, Express.js, Flask, NumPy, Pandas, Matplotlib, SciKitLearn],
 )
 
 #v(NEW_SECTION_SPACE - 0.75em)
@@ -157,7 +168,7 @@
   "Contractor Work: Tech Lead & Manager",
   "SwingLens LLC",
   monthYear(5, 2025),
-  TODAY,
+  monthYear(6, 2025),
   list(
     [
       Managed a team of 7 intern engineers whilst working closely with other advisors.
@@ -166,7 +177,7 @@
       Advised on *Python*, *Flask*, *Hardware* configuration, and industry programming practices.
     ],
     [
-      Developed and open-sourced a *Python* tool for importing *Jupyter Notebooks*, streamlining data science workflows.
+      Developed and open-sourced a *Python* tool for importing *Jupyter Notebooks*.
     ],
   ),
 )
@@ -184,10 +195,10 @@
     [
       Trained *SciKitLearn* models to identify vulnerable network data.
     ],
-    [
-      Collaborated closely with graduate student Su Wang and Prof. Dong Chen,
-      providing daily progress reports and weekly updates.
-    ],
+    //[
+    //  Collaborated closely with graduate student Su Wang and Prof. Dong Chen,
+    //  providing daily progress reports and weekly updates.
+    //],
   ),
 )
 
@@ -251,13 +262,39 @@
 // )
 
 #exprItem(
+  "Muserve App",
+  "Author",
+  monthYear(7, 2025),
+  TODAY,
+  box[
+    #text[
+      Self hosted music streaming service with future plans of developing compatible hardware.
+    ]
+    #list(
+      [
+        Hand rolled, multiprocess safe, authentication using *python*, *JWTs*, and *sockets*.
+      ],
+      [
+        Safe data ingest with *mimetype detection*, conversion to *Vorbis ogg*, and storage in *postgres*.
+      ],
+      [
+        Web UI written in modular *JavaScript*, using *Flask* templates on static routes.
+      ],
+      [
+        Seperation of internal and external network via *Nginx Proxying*
+      ],
+    )
+  ],
+)
+
+#exprItem(
   "Distributed Custom ISA Execution Environment",
   "Author",
   monthYear(4, 2025),
   TODAY,
   box[
     #text[
-      Designed and am working towards implementing a complete, custom computing ecosystem, including an *Instruction Set Architecture* (ISA), *Assembler*, *Virtual Machine* (VM), and a *TCP* machine state transmission networking protocol. The system enables distributed execution of custom machine code across a client-router-server architecture.
+      Designed a custom computing ecosystem, including an *Instruction Set Architecture* (ISA), *Assembler*, *Virtual Machine* (VM), and a *TCP* machine state transmission networking protocol. The system enables distributed execution of custom machine code across a client-router-server architecture.
     ]
     #list(
       [
@@ -267,7 +304,7 @@
         The custom *TCP* networking protocol implemented in *Go*, enables distributed execution by transmitting machine state packets between client, router, and server.
       ],
       [
-        The *assembler* translates human-readable assembly into the custom ISA's machine code using a *LL(1) Tabular Parser* dynamically generated applying *Formal Language Theory* algorithms.
+        The *assembler* translates human-readable assembly into the custom ISA's machine code using a *LL(1) Tabular Parser* dynamically generated applying *Formal Language Theory*.
       ],
     )
   ],
@@ -309,20 +346,20 @@
 //   programming language written in *Python*.
 // ]))
 
-#exprItem(
-  "Zine App",
-  "Author",
-  monthYear(3, 2025),
-  TODAY,
-  list(
-    [
-      Architecting the backend in *Go*, featuring microservices for authentication and *MinIO/S3 storage integration*, alongside *Redis* with a *custom Go wrapper* for session management.
-    ],
-    [
-      Developing the *frontend with TypeScript and React (using Vite)*, with *NGINX* for reverse proxying backend services and *Docker Compose* for containerized deployment.
-    ],
-  ),
-)
+//#exprItem(
+//  "Zine App",
+//  "Author",
+//  monthYear(3, 2025),
+//  TODAY,
+//  list(
+//    [
+//      Architecting the backend in *Go*, featuring microservices for authentication and *MinIO/S3 storage integration*, alongside *Redis* with a *custom Go wrapper* for session management.
+//    ],
+//    [
+//      Developing the *frontend with TypeScript and React (using Vite)*, with *NGINX* for reverse proxying backend services and *Docker Compose* for containerized deployment.
+//    ],
+//  ),
+//)
 
 #exprItem(
   "Robotics Software Engineer",
