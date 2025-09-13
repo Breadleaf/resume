@@ -4,17 +4,23 @@ all:
 	@echo "build"
 	@echo "compile"
 	@echo "watch"
+	@echo "view"
 	@echo "fmt"
 
 build:
-	typst compile resume.typ resume.pdf --font-path ./fonts
+	typst compile resume_software.typ bradley_hutchings_swe_resume.pdf --font-path ./fonts
+	typst compile resume_hardware.typ bradley_hutchings_emb_resume.pdf --font-path ./fonts
 
-compile: build fmt
+compile: fmt build
 
 watch:
 	@#https://github.com/breadleaf/watcher-cli
-	$(WATCHER) -files resume.typ -command "make compile"
+	$(WATCHER) -files resume_software.typ resume_hardware.typ -command "make compile"
+
+view:
+	grip README.md 8000
 
 fmt:
 	@#https://github.com/Enter-tainer/typstyle
-	typstyle -i resume.typ
+	typstyle -i resume_software.typ
+	typstyle -i resume_hardware.typ
