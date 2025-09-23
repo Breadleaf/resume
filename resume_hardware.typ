@@ -160,8 +160,10 @@
   [*Software Tools*],
   [| Linux, Git, PlatformIO, Fusion360, EagleCAD, FreeCAD, KiCAD],
 
-  [*Hardware Tools*], [| Oscilloscope, Arduino, THT & SMD Soldering],
-  [*Languages*], [| Python3, C/C++, Rust, Go, JavaScript, Postgres SQL],
+  [*Hardware Tools*], [| Quartus, Oscilloscope, Arduino, THT & SMD Soldering],
+  [*Languages*],
+  [| Python3, C/C++, Verilog, Rust, Go, JavaScript, Postgres SQL],
+
   [*Protocols*], [| I2C, SPI],
 )
 
